@@ -13,7 +13,7 @@ export interface DropDownItem {
 	custom?: ReactNode;
 }
 
-export interface DropDownPropsInterface {
+export interface DropDownProps {
 	visible: boolean;
 	onDismiss: () => void;
 	showDropDown: () => void;
@@ -31,7 +31,7 @@ export interface DropDownPropsInterface {
 
 type TextInputPropsWithoutTheme = Without<TextInputProps, 'theme'>;
 
-const DropDown = forwardRef<TouchableWithoutFeedback, DropDownPropsInterface>(
+const DropDown = forwardRef<TouchableWithoutFeedback, DropDownProps>(
 	( props, ref ) => {
 		const activeTheme = useTheme();
 		const {
