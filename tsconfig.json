@@ -1,21 +1,30 @@
 {
   "compilerOptions": {
-    "lib": ["es6"],
+    "lib": [
+      "ES6"
+    ],
     "declaration": true,
-    "declarationDir": "./dist",
+    "declarationDir": "dist",
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": false,
     "noUnusedParameters": true,
     "strictNullChecks": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "noImplicitAny": true,
-    "outDir": "./dist",
-    "target": "esnext",
+    "outDir": "dist",
+    "target": "ESNext",
     "jsx": "react-native",
     "skipLibCheck": true,
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
-  "include": ["./src/DropDown.tsx"],
-  "exclude": ["./node_modules", "./Example"]
+  "include": [
+    "src/DropDown.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "Example"
+  ]
 }
