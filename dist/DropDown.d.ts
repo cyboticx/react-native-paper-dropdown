@@ -6,6 +6,7 @@ declare type Without<T, K> = Pick<T, Exclude<keyof T, K>>;
 export interface DropDownItem {
     label: string;
     value: string | number;
+    icon?: string | number;
     custom?: (label: string, value: string | number) => ReactNode;
 }
 export interface DropDownProps {
