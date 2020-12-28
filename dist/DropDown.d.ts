@@ -7,7 +7,7 @@ export interface DropDownItem {
     label: string;
     value: string | number;
     icon?: string | number;
-    custom?: (label: string, value: string | number) => ReactNode;
+    custom?: (label: string, value: string | number, icon?: string | number) => ReactNode;
 }
 export interface DropDownProps {
     visible: boolean;

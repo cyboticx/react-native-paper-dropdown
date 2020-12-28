@@ -11,7 +11,7 @@ export interface DropDownItem {
 	label: string;
 	value: string | number;
 	icon?: string | number;
-	custom?: (label: string, value: string | number) => ReactNode;
+	custom?: (label: string, value: string | number, icon?: string | number) => ReactNode;
 }
 
 export interface DropDownProps {
@@ -112,7 +112,7 @@ const DropDown = forwardRef<TouchableWithoutFeedback, DropDownProps>(
 									onDismiss();
 								}
 							} }
-							title={ _item.custom ? _item.custom( _item.label, _item.value ) : _item.label }
+							title={ _item.custom ? _item.custom( _item.label, _item.value, _item.icon ) : _item.label }
 							style={ { width: inputLayout?.width } }
 						/>
 					) ) }
