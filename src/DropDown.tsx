@@ -10,7 +10,7 @@ type Without<T, K> = Pick<T, Exclude<keyof T, K>>;
 export interface DropDownItem {
 	label: string;
 	value: string | number;
-	custom?: ReactNode;
+	custom?: (label: string, value: string | number) => ReactNode;
 }
 
 export interface DropDownProps {
@@ -111,7 +111,7 @@ const DropDown = forwardRef<TouchableWithoutFeedback, DropDownProps>(
 									onDismiss();
 								}
 							} }
-							title={ /* _item.custom || */ _item.label }
+							title={ _item.custom ? _item.custom( _item.label, _item.value ) : _item.label }
 							style={ { width: inputLayout?.width } }
 						/>
 					) ) }
