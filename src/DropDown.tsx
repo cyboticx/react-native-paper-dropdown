@@ -1,4 +1,4 @@
-import { LayoutChangeEvent, ScrollView, TouchableWithoutFeedback, View, } from 'react-native';
+import { ImageSourcePropType, LayoutChangeEvent, ScrollView, TouchableWithoutFeedback, View, } from 'react-native';
 import { Menu, TextInput, TouchableRipple, useTheme } from 'react-native-paper';
 import React, { forwardRef, ReactNode, useEffect, useState } from 'react';
 
@@ -10,8 +10,8 @@ type Without<T, K> = Pick<T, Exclude<keyof T, K>>;
 export interface DropDownItem {
 	label: string;
 	value: string | number;
-	icon?: string | number;
-	custom?: (label: string, value: string | number, icon?: string | number) => ReactNode;
+	icon?: ImageSourcePropType;
+	custom?: (label: string, value: string | number, icon?: ImageSourcePropType) => ReactNode;
 }
 
 export interface DropDownProps {

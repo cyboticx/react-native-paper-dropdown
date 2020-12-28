@@ -1,4 +1,4 @@
-import { TouchableWithoutFeedback } from 'react-native';
+import { ImageSourcePropType, TouchableWithoutFeedback } from 'react-native';
 import React, { ReactNode } from 'react';
 import { TextInputProps } from 'react-native-paper/lib/typescript/src/components/TextInput/TextInput';
 import { Theme } from 'react-native-paper/lib/typescript/src/types';
@@ -6,8 +6,8 @@ declare type Without<T, K> = Pick<T, Exclude<keyof T, K>>;
 export interface DropDownItem {
     label: string;
     value: string | number;
-    icon?: string | number;
-    custom?: (label: string, value: string | number, icon?: string | number) => ReactNode;
+    icon?: ImageSourcePropType;
+    custom?: (label: string, value: string | number, icon?: ImageSourcePropType) => ReactNode;
 }
 export interface DropDownProps {
     visible: boolean;
