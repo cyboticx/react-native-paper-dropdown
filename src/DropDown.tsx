@@ -111,7 +111,7 @@ const DropDown = forwardRef<TouchableWithoutFeedback, DropDownProps>(
 									onDismiss();
 								}
 							} }
-							title={ _item.custom || _item.label }
+							title={ /* _item.custom || */ _item.label }
 							style={ { width: inputLayout?.width } }
 						/>
 					) ) }
